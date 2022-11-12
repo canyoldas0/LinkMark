@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Mulish-Black.tff</string>
+		<string>Mulish-BlackItalic.ttf</string>
+		<string>Mulish-Bold.ttf</string>
+		<string>Mulish-BoldItalic.ttf</string>
+		<string>Mulish-Medium.ttf</string>
+		<string>Mulish-Regular.ttf</string>
+		<string>Mulish-SemiBold.ttf</string>
+		<string>Mulish-Light.ttf</string>
+		<string>Mulish-ExtraBold.tff</string>
+	</array>
+</dict>
+</plist>

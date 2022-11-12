@@ -7,21 +7,126 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E0827A029203BDE006F915B /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08279F29203BDE006F915B /* View+Extensions.swift */; };
+		1E0827A3292042A8006F915B /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0827A2292042A8006F915B /* AddItemView.swift */; };
+		1E0827A529204341006F915B /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0827A429204341006F915B /* CategoryButton.swift */; };
+		1E6EF4D4291C2358009A6F57 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6EF4D3291C2358009A6F57 /* ShareViewController.swift */; };
+		1E6EF4DB291C2358009A6F57 /* ShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1E6EF4D1291C2358009A6F57 /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1E720C0029184F7200170E30 /* TrackLinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E720BFF29184F7200170E30 /* TrackLinkApp.swift */; };
 		1E720C0229184F7200170E30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E720C0129184F7200170E30 /* ContentView.swift */; };
 		1E720C0429184F7300170E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E720C0329184F7300170E30 /* Assets.xcassets */; };
 		1E720C0729184F7300170E30 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E720C0629184F7300170E30 /* Preview Assets.xcassets */; };
+		1EF93472291F056E00938831 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF93471291F056E00938831 /* HomeView.swift */; };
+		1EF93486291F062400938831 /* Mulish-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93476291F062400938831 /* Mulish-BlackItalic.ttf */; };
+		1EF93487291F062400938831 /* Mulish-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93476291F062400938831 /* Mulish-BlackItalic.ttf */; };
+		1EF93488291F062400938831 /* Mulish-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93477291F062400938831 /* Mulish-ExtraBold.ttf */; };
+		1EF93489291F062400938831 /* Mulish-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93477291F062400938831 /* Mulish-ExtraBold.ttf */; };
+		1EF9348A291F062400938831 /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93478291F062400938831 /* Mulish-Black.ttf */; };
+		1EF9348B291F062400938831 /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93478291F062400938831 /* Mulish-Black.ttf */; };
+		1EF9348C291F062400938831 /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93479291F062400938831 /* Mulish-Bold.ttf */; };
+		1EF9348D291F062400938831 /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93479291F062400938831 /* Mulish-Bold.ttf */; };
+		1EF9348E291F062400938831 /* Mulish-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF9347A291F062400938831 /* Mulish-BoldItalic.ttf */; };
+		1EF9348F291F062400938831 /* Mulish-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF9347A291F062400938831 /* Mulish-BoldItalic.ttf */; };
+		1EF93490291F062400938831 /* Mulish-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF9347B291F062400938831 /* Mulish-ExtraLightItalic.ttf */; };
+		1EF93491291F062400938831 /* Mulish-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF9347B291F062400938831 /* Mulish-ExtraLightItalic.ttf */; };
+		1EF93492291F062400938831 /* Mulish-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF9347C291F062400938831 /* Mulish-Medium.ttf */; };
+		1EF93493291F062400938831 /* Mulish-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF9347C291F062400938831 /* Mulish-Medium.ttf */; };
+		1EF93494291F062400938831 /* Mulish-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF9347D291F062400938831 /* Mulish-SemiBold.ttf */; };
+		1EF93495291F062400938831 /* Mulish-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF9347D291F062400938831 /* Mulish-SemiBold.ttf */; };
+		1EF93496291F062400938831 /* Mulish-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF9347E291F062400938831 /* Mulish-MediumItalic.ttf */; };
+		1EF93497291F062400938831 /* Mulish-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF9347E291F062400938831 /* Mulish-MediumItalic.ttf */; };
+		1EF93498291F062400938831 /* Mulish-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF9347F291F062400938831 /* Mulish-ExtraLight.ttf */; };
+		1EF93499291F062400938831 /* Mulish-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF9347F291F062400938831 /* Mulish-ExtraLight.ttf */; };
+		1EF9349A291F062400938831 /* Mulish-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93480291F062400938831 /* Mulish-SemiBoldItalic.ttf */; };
+		1EF9349B291F062400938831 /* Mulish-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93480291F062400938831 /* Mulish-SemiBoldItalic.ttf */; };
+		1EF9349C291F062400938831 /* Mulish-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93481291F062400938831 /* Mulish-ExtraBoldItalic.ttf */; };
+		1EF9349D291F062400938831 /* Mulish-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93481291F062400938831 /* Mulish-ExtraBoldItalic.ttf */; };
+		1EF9349E291F062400938831 /* Mulish-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93482291F062400938831 /* Mulish-Light.ttf */; };
+		1EF9349F291F062400938831 /* Mulish-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93482291F062400938831 /* Mulish-Light.ttf */; };
+		1EF934A0291F062400938831 /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93483291F062400938831 /* Mulish-Regular.ttf */; };
+		1EF934A1291F062400938831 /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93483291F062400938831 /* Mulish-Regular.ttf */; };
+		1EF934A2291F062400938831 /* Mulish-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93484291F062400938831 /* Mulish-LightItalic.ttf */; };
+		1EF934A3291F062400938831 /* Mulish-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93484291F062400938831 /* Mulish-LightItalic.ttf */; };
+		1EF934A4291F062400938831 /* Mulish-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93485291F062400938831 /* Mulish-Italic.ttf */; };
+		1EF934A5291F062400938831 /* Mulish-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93485291F062400938831 /* Mulish-Italic.ttf */; };
+		1EF934A9291F064500938831 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF934A7291F064500938831 /* Color+Extensions.swift */; };
+		1EF934AA291F064500938831 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF934A8291F064500938831 /* Font+Extensions.swift */; };
+		1EF934AD291F068900938831 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF934AB291F068900938831 /* SearchField.swift */; };
+		1EF934AE291F068900938831 /* CarouselHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF934AC291F068900938831 /* CarouselHeader.swift */; };
+		1EF934B1291F06D000938831 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF934B0291F06D000938831 /* ListView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1E6EF4D9291C2358009A6F57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E720BF429184F7200170E30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E6EF4D0291C2358009A6F57;
+			remoteInfo = ShareExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1E720C1F291851A900170E30 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1E6EF4DB291C2358009A6F57 /* ShareExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1E08279F29203BDE006F915B /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		1E0827A2292042A8006F915B /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		1E0827A429204341006F915B /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
+		1E6EF4D1291C2358009A6F57 /* ShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E6EF4D3291C2358009A6F57 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		1E6EF4D8291C2358009A6F57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E720BFC29184F7200170E30 /* TrackLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E720BFF29184F7200170E30 /* TrackLinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLinkApp.swift; sourceTree = "<group>"; };
 		1E720C0129184F7200170E30 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1E720C0329184F7300170E30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E720C0629184F7300170E30 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1EF9346E291EFCBB00938831 /* ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension.entitlements; sourceTree = "<group>"; };
+		1EF9346F291EFD1A00938831 /* TrackLink.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrackLink.entitlements; sourceTree = "<group>"; };
+		1EF93471291F056E00938831 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1EF93473291F05C400938831 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1EF93476291F062400938831 /* Mulish-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-BlackItalic.ttf"; sourceTree = "<group>"; };
+		1EF93477291F062400938831 /* Mulish-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraBold.ttf"; sourceTree = "<group>"; };
+		1EF93478291F062400938831 /* Mulish-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Black.ttf"; sourceTree = "<group>"; };
+		1EF93479291F062400938831 /* Mulish-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Bold.ttf"; sourceTree = "<group>"; };
+		1EF9347A291F062400938831 /* Mulish-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-BoldItalic.ttf"; sourceTree = "<group>"; };
+		1EF9347B291F062400938831 /* Mulish-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		1EF9347C291F062400938831 /* Mulish-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Medium.ttf"; sourceTree = "<group>"; };
+		1EF9347D291F062400938831 /* Mulish-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-SemiBold.ttf"; sourceTree = "<group>"; };
+		1EF9347E291F062400938831 /* Mulish-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-MediumItalic.ttf"; sourceTree = "<group>"; };
+		1EF9347F291F062400938831 /* Mulish-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraLight.ttf"; sourceTree = "<group>"; };
+		1EF93480291F062400938831 /* Mulish-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		1EF93481291F062400938831 /* Mulish-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		1EF93482291F062400938831 /* Mulish-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Light.ttf"; sourceTree = "<group>"; };
+		1EF93483291F062400938831 /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
+		1EF93484291F062400938831 /* Mulish-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-LightItalic.ttf"; sourceTree = "<group>"; };
+		1EF93485291F062400938831 /* Mulish-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Italic.ttf"; sourceTree = "<group>"; };
+		1EF934A7291F064500938831 /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		1EF934A8291F064500938831 /* Font+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		1EF934AB291F068900938831 /* SearchField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
+		1EF934AC291F068900938831 /* CarouselHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselHeader.swift; sourceTree = "<group>"; };
+		1EF934B0291F06D000938831 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1E6EF4CE291C2358009A6F57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E720BF929184F7200170E30 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -32,10 +137,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E6EF4D2291C2358009A6F57 /* ShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				1EF9346E291EFCBB00938831 /* ShareExtension.entitlements */,
+				1E6EF4D3291C2358009A6F57 /* ShareViewController.swift */,
+				1E6EF4D8291C2358009A6F57 /* Info.plist */,
+			);
+			path = ShareExtension;
+			sourceTree = "<group>";
+		};
 		1E720BF329184F7200170E30 = {
 			isa = PBXGroup;
 			children = (
 				1E720BFE29184F7200170E30 /* TrackLink */,
+				1E6EF4D2291C2358009A6F57 /* ShareExtension */,
 				1E720BFD29184F7200170E30 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				1E720BFC29184F7200170E30 /* TrackLink.app */,
+				1E6EF4D1291C2358009A6F57 /* ShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +168,12 @@
 		1E720BFE29184F7200170E30 /* TrackLink */ = {
 			isa = PBXGroup;
 			children = (
+				1EF93473291F05C400938831 /* Info.plist */,
+				1EF934AF291F068D00938831 /* CommonViews */,
+				1EF934A6291F063400938831 /* Extensions */,
+				1EF93474291F05CD00938831 /* Resources */,
+				1EF93470291F056300938831 /* Scene */,
+				1EF9346F291EFD1A00938831 /* TrackLink.entitlements */,
 				1E720BFF29184F7200170E30 /* TrackLinkApp.swift */,
 				1E720C0129184F7200170E30 /* ContentView.swift */,
 				1E720C0329184F7300170E30 /* Assets.xcassets */,
@@ -67,9 +190,87 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		1EF93470291F056300938831 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				1EF93471291F056E00938831 /* HomeView.swift */,
+				1EF934B0291F06D000938831 /* ListView.swift */,
+				1E0827A2292042A8006F915B /* AddItemView.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		1EF93474291F05CD00938831 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1EF93475291F05E600938831 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1EF93475291F05E600938831 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1EF93478291F062400938831 /* Mulish-Black.ttf */,
+				1EF93476291F062400938831 /* Mulish-BlackItalic.ttf */,
+				1EF93479291F062400938831 /* Mulish-Bold.ttf */,
+				1EF9347A291F062400938831 /* Mulish-BoldItalic.ttf */,
+				1EF93477291F062400938831 /* Mulish-ExtraBold.ttf */,
+				1EF93481291F062400938831 /* Mulish-ExtraBoldItalic.ttf */,
+				1EF9347F291F062400938831 /* Mulish-ExtraLight.ttf */,
+				1EF9347B291F062400938831 /* Mulish-ExtraLightItalic.ttf */,
+				1EF93485291F062400938831 /* Mulish-Italic.ttf */,
+				1EF93482291F062400938831 /* Mulish-Light.ttf */,
+				1EF93484291F062400938831 /* Mulish-LightItalic.ttf */,
+				1EF9347C291F062400938831 /* Mulish-Medium.ttf */,
+				1EF9347E291F062400938831 /* Mulish-MediumItalic.ttf */,
+				1EF93483291F062400938831 /* Mulish-Regular.ttf */,
+				1EF9347D291F062400938831 /* Mulish-SemiBold.ttf */,
+				1EF93480291F062400938831 /* Mulish-SemiBoldItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1EF934A6291F063400938831 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1EF934A7291F064500938831 /* Color+Extensions.swift */,
+				1EF934A8291F064500938831 /* Font+Extensions.swift */,
+				1E08279F29203BDE006F915B /* View+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1EF934AF291F068D00938831 /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				1EF934AC291F068900938831 /* CarouselHeader.swift */,
+				1EF934AB291F068900938831 /* SearchField.swift */,
+				1E0827A429204341006F915B /* CategoryButton.swift */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1E6EF4D0291C2358009A6F57 /* ShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E6EF4DC291C2358009A6F57 /* Build configuration list for PBXNativeTarget "ShareExtension" */;
+			buildPhases = (
+				1E6EF4CD291C2358009A6F57 /* Sources */,
+				1E6EF4CE291C2358009A6F57 /* Frameworks */,
+				1E6EF4CF291C2358009A6F57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShareExtension;
+			productName = ShareExtension;
+			productReference = 1E6EF4D1291C2358009A6F57 /* ShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		1E720BFB29184F7200170E30 /* TrackLink */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E720C0A29184F7300170E30 /* Build configuration list for PBXNativeTarget "TrackLink" */;
@@ -77,10 +278,12 @@
 				1E720BF829184F7200170E30 /* Sources */,
 				1E720BF929184F7200170E30 /* Frameworks */,
 				1E720BFA29184F7200170E30 /* Resources */,
+				1E720C1F291851A900170E30 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1E6EF4DA291C2358009A6F57 /* PBXTargetDependency */,
 			);
 			name = TrackLink;
 			productName = TrackLink;
@@ -97,6 +300,9 @@
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					1E6EF4D0291C2358009A6F57 = {
+						CreatedOnToolsVersion = 14.0;
+					};
 					1E720BFB29184F7200170E30 = {
 						CreatedOnToolsVersion = 14.0;
 					};
@@ -116,35 +322,152 @@
 			projectRoot = "";
 			targets = (
 				1E720BFB29184F7200170E30 /* TrackLink */,
+				1E6EF4D0291C2358009A6F57 /* ShareExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1E6EF4CF291C2358009A6F57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EF934A3291F062400938831 /* Mulish-LightItalic.ttf in Resources */,
+				1EF93489291F062400938831 /* Mulish-ExtraBold.ttf in Resources */,
+				1EF934A5291F062400938831 /* Mulish-Italic.ttf in Resources */,
+				1EF9349F291F062400938831 /* Mulish-Light.ttf in Resources */,
+				1EF9348B291F062400938831 /* Mulish-Black.ttf in Resources */,
+				1EF93499291F062400938831 /* Mulish-ExtraLight.ttf in Resources */,
+				1EF93487291F062400938831 /* Mulish-BlackItalic.ttf in Resources */,
+				1EF9348D291F062400938831 /* Mulish-Bold.ttf in Resources */,
+				1EF9349B291F062400938831 /* Mulish-SemiBoldItalic.ttf in Resources */,
+				1EF934A1291F062400938831 /* Mulish-Regular.ttf in Resources */,
+				1EF93497291F062400938831 /* Mulish-MediumItalic.ttf in Resources */,
+				1EF93491291F062400938831 /* Mulish-ExtraLightItalic.ttf in Resources */,
+				1EF9349D291F062400938831 /* Mulish-ExtraBoldItalic.ttf in Resources */,
+				1EF93495291F062400938831 /* Mulish-SemiBold.ttf in Resources */,
+				1EF9348F291F062400938831 /* Mulish-BoldItalic.ttf in Resources */,
+				1EF93493291F062400938831 /* Mulish-Medium.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E720BFA29184F7200170E30 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EF934A4291F062400938831 /* Mulish-Italic.ttf in Resources */,
+				1EF93498291F062400938831 /* Mulish-ExtraLight.ttf in Resources */,
+				1EF93490291F062400938831 /* Mulish-ExtraLightItalic.ttf in Resources */,
+				1EF93488291F062400938831 /* Mulish-ExtraBold.ttf in Resources */,
+				1EF9348E291F062400938831 /* Mulish-BoldItalic.ttf in Resources */,
+				1EF9349C291F062400938831 /* Mulish-ExtraBoldItalic.ttf in Resources */,
 				1E720C0729184F7300170E30 /* Preview Assets.xcassets in Resources */,
+				1EF9348A291F062400938831 /* Mulish-Black.ttf in Resources */,
+				1EF9349E291F062400938831 /* Mulish-Light.ttf in Resources */,
+				1EF934A2291F062400938831 /* Mulish-LightItalic.ttf in Resources */,
+				1EF9348C291F062400938831 /* Mulish-Bold.ttf in Resources */,
 				1E720C0429184F7300170E30 /* Assets.xcassets in Resources */,
+				1EF93492291F062400938831 /* Mulish-Medium.ttf in Resources */,
+				1EF93486291F062400938831 /* Mulish-BlackItalic.ttf in Resources */,
+				1EF9349A291F062400938831 /* Mulish-SemiBoldItalic.ttf in Resources */,
+				1EF93496291F062400938831 /* Mulish-MediumItalic.ttf in Resources */,
+				1EF93494291F062400938831 /* Mulish-SemiBold.ttf in Resources */,
+				1EF934A0291F062400938831 /* Mulish-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1E6EF4CD291C2358009A6F57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E6EF4D4291C2358009A6F57 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E720BF829184F7200170E30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EF934B1291F06D000938831 /* ListView.swift in Sources */,
+				1E0827A029203BDE006F915B /* View+Extensions.swift in Sources */,
+				1EF934AD291F068900938831 /* SearchField.swift in Sources */,
+				1EF934AE291F068900938831 /* CarouselHeader.swift in Sources */,
+				1EF93472291F056E00938831 /* HomeView.swift in Sources */,
 				1E720C0229184F7200170E30 /* ContentView.swift in Sources */,
+				1EF934AA291F064500938831 /* Font+Extensions.swift in Sources */,
 				1E720C0029184F7200170E30 /* TrackLinkApp.swift in Sources */,
+				1E0827A529204341006F915B /* CategoryButton.swift in Sources */,
+				1EF934A9291F064500938831 /* Color+Extensions.swift in Sources */,
+				1E0827A3292042A8006F915B /* AddItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1E6EF4DA291C2358009A6F57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E6EF4D0291C2358009A6F57 /* ShareExtension */;
+			targetProxy = 1E6EF4D9291C2358009A6F57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		1E6EF4DD291C2358009A6F57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShareExtension/ShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G746TBT9SB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShareExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.canyoldas.TrackLink.ShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E6EF4DE291C2358009A6F57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShareExtension/ShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G746TBT9SB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShareExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.canyoldas.TrackLink.ShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		1E720C0829184F7300170E30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -262,14 +585,17 @@
 		1E720C0B29184F7300170E30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TrackLink/TrackLink.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TrackLink/Preview Content\"";
 				DEVELOPMENT_TEAM = G746TBT9SB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TrackLink/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -291,14 +617,17 @@
 		1E720C0C29184F7300170E30 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TrackLink/TrackLink.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TrackLink/Preview Content\"";
 				DEVELOPMENT_TEAM = G746TBT9SB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TrackLink/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -320,6 +649,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1E6EF4DC291C2358009A6F57 /* Build configuration list for PBXNativeTarget "ShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E6EF4DD291C2358009A6F57 /* Debug */,
+				1E6EF4DE291C2358009A6F57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1E720BF729184F7200170E30 /* Build configuration list for PBXProject "TrackLink" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
