@@ -53,7 +53,7 @@ struct HomeView: View {
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     HStack {
-                        Text("Track Links")
+                        Text("LinkMark")
                             .font(.mulish(.bold, 32))
                             .foregroundColor(.primary)
                         Spacer()
