@@ -18,10 +18,6 @@ struct CategoryButton: View {
             HStack {
                 Text("\(item.name)")
                 Text("\(item.links.count)")
-//                    .padding(10)
-////                    .padding(1)
-//                    .background(Color.jetGreen)
-//                    .clipShape(Circle())
             }
                 .padding(.horizontal, 20)
                 .padding(.vertical, 10)

@@ -34,7 +34,7 @@ var string : String
 }
 
 class CustomLinkView: LPLinkView {
-    override var intrinsicContentSize: CGSize { CGSize(width: 0, height: super.intrinsicContentSize.height) }
+//    override var intrinsicContentSize: CGSize { CGSize(width: 0, height: super.intrinsicContentSize.height) }
 }
 
 struct LinkRow : UIViewRepresentable {
