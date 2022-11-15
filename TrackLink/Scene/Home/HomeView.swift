@@ -16,14 +16,8 @@ struct GroupItem: Identifiable {
 
 struct HomeView: View {
     
-    @State private var width: CGFloat?
-    @State private var groups: [GroupItem] = [
-        .init(name: "Shoes", links: ["dsds"]),
-        .init(name: "Furniture", links: ["dsds"]),
-        .init(name: "Jeans", links: ["dsds"]),
-        .init(name: "Trendyol", links: ["dsds"])
-    ]
-    
+    @ObservedObject var viewModel = HomeViewModel()
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -35,15 +29,15 @@ struct HomeView: View {
                     .padding(.horizontal, 20)
                     
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(alignment: .center) {
-                            ForEach($groups) { item in
+                        LazyHStack(alignment: .center) {
+                            ForEach($viewModel.groups) { item in
                                 CategoryButton(item: item)
                             }
-                            .frame(minWidth: width)
 //                            .padding(.horizontal, 1)
                         }
                     }
-//                    ListView()
+                    Spacer()
+                    ListView()
                     
                 }
                 .padding(.top, 26)
@@ -67,7 +61,7 @@ struct HomeView: View {
                         }
                         
                     }
-                    .padding(.top, 20)
+                    .padding(.vertical, 20)
                 }
             }
         }
