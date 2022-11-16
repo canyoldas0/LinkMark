@@ -12,10 +12,24 @@ enum HeaderButtonType {
     case image(String)
 }
 
+enum ListShownType: CaseIterable {
+    case byGroup, byName
+    
+    func getTitle() -> String {
+        switch self {
+        case .byGroup:
+            return "Groups"
+        case .byName:
+            return "Websites"
+        }
+    }
+}
+
 struct CarouselHeader: View {
     
     var buttonType: HeaderButtonType
     var headerTitle: String
+    @Binding var menuType: ListShownType
     var viewAllAction: () -> Void
     
     var body: some View {
@@ -24,22 +38,20 @@ struct CarouselHeader: View {
             Text(headerTitle)
                 .font(.mulish(.bold, 20))
             Spacer()
-            Button {
-                viewAllAction()
-            } label: {
-
-                switch buttonType {
-                case .text(let string):
-                    Text(string)
-                        .foregroundColor(.textGray)
-                        .font(.mulish(.semiBold))
-                case .image(let string):
-                    Image(string)
-                        .resizable()
-                        .frame(width: 32, height: 32)
+            Menu {
+                Picker(selection: $menuType, label: EmptyView()) {
+                    ForEach(ListShownType.allCases, id: \.self) {
+                        Text($0.getTitle())
+                    }
                 }
-               
+                .pickerStyle(.automatic)
+                .padding(.vertical, 5)
+            } label: {
+                Text("List by")
+                    .foregroundColor(.black)
+                    .font(.mulish(.light, 14))
             }
+            
         }
         .padding(.top, 12)
     }
@@ -47,6 +59,6 @@ struct CarouselHeader: View {
 
 struct CarouselHeader_Previews: PreviewProvider {
     static var previews: some View {
-        CarouselHeader(buttonType: .image("filterIcon"), headerTitle: "Popular Now") { }
+        CarouselHeader(buttonType: .image("filterIcon"), headerTitle: "Popular Now", menuType: .constant(.byGroup)) { }
     }
 }

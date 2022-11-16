@@ -17,14 +17,17 @@ struct GroupItem: Identifiable {
 struct HomeView: View {
     
     @ObservedObject var viewModel = HomeViewModel()
-
+    @State private var redraw = false
+    @State private var listShownType: ListShownType = .byGroup
+    @State private var showingAddItem = false
+    
     var body: some View {
         NavigationView {
             ScrollView {
-                VStack(alignment: .leading) {
+                LazyVStack(alignment: .leading) {
                     // Carousel Group
-                    CarouselHeader(buttonType: .image("filterIcon"), headerTitle: "Groups") {
-                        print("hehe")
+                    CarouselHeader(buttonType: .image("filterIcon"), headerTitle: listShownType.getTitle(), menuType: $listShownType) {
+                        
                     }
                     .padding(.horizontal, 20)
                     
@@ -33,12 +36,13 @@ struct HomeView: View {
                             ForEach($viewModel.groups) { item in
                                 CategoryButton(item: item)
                             }
-//                            .padding(.horizontal, 1)
                         }
                     }
                     Spacer()
-                    ListView()
                     
+                    List(viewModel.list, id: \.self) { string in
+                        MetadataView(vm: LinkViewModel(link: string))
+                    }
                 }
                 .padding(.top, 26)
             }
@@ -52,18 +56,23 @@ struct HomeView: View {
                             .foregroundColor(.primary)
                         Spacer()
                         Button {
-                            // add
+                            showingAddItem.toggle()
                         } label: {
                             Image(systemName: "plus")
                                 .resizable()
                                 .foregroundColor(.primary)
                                 .frame(width: 20, height: 20)
                         }
-                        
                     }
                     .padding(.vertical, 20)
                 }
             }
+        }
+        .sheet(isPresented: $showingAddItem) {
+            AddItemView()
+                .presentationDetents([.large])
+                .presentationDragIndicator(.visible)
+
         }
     }
 }
