@@ -67,12 +67,12 @@ struct HomeView: View {
                     .padding(.vertical, 20)
                 }
             }
+            .background(Color(hex: "#EAEAEF"))
         }
         .sheet(isPresented: $showingAddItem) {
             AddItemView()
                 .presentationDetents([.large])
                 .presentationDragIndicator(.visible)
-
         }
     }
 }
