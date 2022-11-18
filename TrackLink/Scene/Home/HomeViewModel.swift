@@ -17,8 +17,6 @@ final class HomeViewModel: ObservableObject {
     ]
     
     @Published var list: [String] = [
-        "https://www.google.com",
-        "https://stackoverflow.com/questions/66427781/how-to-fetch-link-metadata-in-swiftui-using-linkpresentation",
-        "https://www.pararius.com/apartment-for-rent/almere/983071a5/polenstraat"
+        "https://www.google.com"
     ]
 }

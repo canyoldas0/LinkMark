@@ -7,17 +7,33 @@
 
 import SwiftUI
 
+enum ItemType: String, CaseIterable {
+    case category = "Category"
+    case item = "Item"
+}
+
 struct AddItemView: View {
     
     @State private var urlText: String = ""
     @State private var nameText: String = ""
+    @State private var selectedItemType: ItemType?
+//    @State private var viewConfigured = false
     
     var body: some View {
         VStack(spacing: 4) {
+            Picker(selection: $selectedItemType) {
+                ForEach(ItemType.allCases, id: \.self) {
+                    Text($0.rawValue)
+                }
+            } label: {
+                //
+            }
+            .pickerStyle(.wheel)
+
+            
             Text("Add New Link")
                 .font(.mulish(.bold, 24))
                 .padding(.bottom, 10)
-
             CustomTextField(text: $urlText, placeholder: "Enter url")
             CustomTextField(text: $nameText, placeholder: "Enter name")
             Button {
