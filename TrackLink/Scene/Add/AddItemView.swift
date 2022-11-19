@@ -21,16 +21,6 @@ struct AddItemView: View {
     
     var body: some View {
         VStack(spacing: 4) {
-            Picker(selection: $selectedItemType) {
-                ForEach(ItemType.allCases, id: \.self) {
-                    Text($0.rawValue)
-                }
-            } label: {
-                //
-            }
-            .pickerStyle(.wheel)
-
-            
             Text("Add New Link")
                 .font(.mulish(.bold, 24))
                 .padding(.bottom, 10)

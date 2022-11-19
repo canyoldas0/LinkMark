@@ -20,54 +20,63 @@ struct HomeView: View {
     @State private var redraw = false
     @State private var listShownType: ListShownType = .byGroup
     @State private var showingAddItem = false
+    @State private var showingWebView = false
+//    private var cellClicked: ((String) -> Void)?
+    
+    init() {
+        UITableView.appearance().backgroundColor = UIColor.clear
+    }
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                LazyVStack(alignment: .leading) {
-                    // Carousel Group
-                    CarouselHeader(buttonType: .image("filterIcon"), headerTitle: listShownType.getTitle(), menuType: $listShownType) {
+                ScrollView {
+                    LazyVStack(alignment: .leading) {
+                        // Carousel Group
+                        CarouselHeader(buttonType: .image("filterIcon"), headerTitle: listShownType.getTitle(), menuType: $listShownType) {
+                            
+                        }
+                        .padding(.horizontal, 20)
                         
-                    }
-                    .padding(.horizontal, 20)
-                    
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        LazyHStack(alignment: .center) {
-                            ForEach($viewModel.groups) { item in
-                                CategoryButton(item: item)
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            LazyHStack(alignment: .center) {
+                                ForEach($viewModel.groups) { item in
+                                    CategoryButton(item: item)
+                                }
+                            }
+                        }
+                        ForEach(viewModel.list, id: \.self) { item in
+                            Button {
+                                //                            cellClicked?(item)
+                            } label: {
+                                MetadataView(vm: LinkViewModel(link: item))
                             }
                         }
                     }
-                    Spacer()
-                    
-                    List(viewModel.list, id: \.self) { string in
-                        MetadataView(vm: LinkViewModel(link: string))
-                    }
+                    .padding(.top, 26)
                 }
-                .padding(.top, 26)
-            }
-            // Navigation Bar
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    HStack {
-                        Text("LinkMark")
-                            .font(.mulish(.bold, 32))
-                            .foregroundColor(.primary)
-                        Spacer()
-                        Button {
-                            showingAddItem.toggle()
-                        } label: {
-                            Image(systemName: "plus")
-                                .resizable()
+                .background(Color(hex: "#EAEAEF"))
+                .foregroundColor(.black)
+                // Navigation Bar
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        HStack {
+                            Text("LinkMark")
+                                .font(.mulish(.bold, 32))
                                 .foregroundColor(.primary)
-                                .frame(width: 20, height: 20)
+                            Spacer()
+                            Button {
+                                showingAddItem.toggle()
+                            } label: {
+                                Image(systemName: "plus")
+                                    .resizable()
+                                    .foregroundColor(.primary)
+                                    .frame(width: 20, height: 20)
+                            }
                         }
+                        .padding(.vertical, 20)
                     }
-                    .padding(.vertical, 20)
                 }
-            }
-            .background(Color(hex: "#EAEAEF"))
         }
         .sheet(isPresented: $showingAddItem) {
             AddItemView()

@@ -22,7 +22,7 @@ final class LinkViewModel : ObservableObject {
         self.urlString = link
         metadataProvider.startFetchingMetadata(for: url) { (metadata, error) in
             guard error == nil else {
-                assertionFailure("Error")
+//                assertionFailure("Error")
                 return
             }
             DispatchQueue.main.async {
