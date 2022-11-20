@@ -67,13 +67,14 @@ struct MetadataView : View {
                         .font(.mulish(.semiBold, 16))
                         .lineLimit(2)
                 }
+                .foregroundColor(.primary)
                 .padding(.top, 2)
                 .padding(.leading, 10)
             }
             Spacer()
            
         }
-        .background(Color(hex: "#D9D9D9"))
+//        .background(Color(hex: "#D9D9D9"))
         .cornerRadius(12)
     }
 }
