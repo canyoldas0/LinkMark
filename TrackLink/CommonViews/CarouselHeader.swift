@@ -18,7 +18,7 @@ enum ListShownType: CaseIterable {
     func getTitle() -> String {
         switch self {
         case .byGroup:
-            return "Groups"
+            return "Categories"
         case .byName:
             return "Websites"
         }
@@ -36,6 +36,7 @@ struct CarouselHeader: View {
         // Carousel View - Populars
         HStack {
             Text(headerTitle)
+                .foregroundColor(.primary)
                 .font(.mulish(.bold, 20))
             Spacer()
             Menu {
@@ -48,7 +49,7 @@ struct CarouselHeader: View {
                 .padding(.vertical, 5)
             } label: {
                 Text("List by")
-                    .foregroundColor(.black)
+                    .foregroundColor(.secondary)
                     .font(.mulish(.light, 14))
             }
             

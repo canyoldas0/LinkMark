@@ -22,7 +22,7 @@ struct CategoryButton: View {
                 .padding(.horizontal, 20)
                 .padding(.vertical, 10)
                 .font(.mulish(.semiBold, 16))
-                .background(item.isSelected ? Color.jetGreen: .white)
+                .background(item.isSelected ? Color.jetGreen: Color.white)
                 .cornerRadius(30)
                 .padding(.horizontal, 3)
         }

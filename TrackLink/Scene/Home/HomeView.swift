@@ -21,69 +21,68 @@ struct HomeView: View {
     @State private var listShownType: ListShownType = .byGroup
     @State private var showingAddItem = false
     @State private var showingWebView = false
-//    private var cellClicked: ((String) -> Void)?
-    
-    init() {
-        UITableView.appearance().backgroundColor = UIColor.clear
-    }
     
     var body: some View {
         NavigationView {
-                ScrollView {
-                    LazyVStack(alignment: .leading) {
-                        // Carousel Group
-                        CarouselHeader(buttonType: .image("filterIcon"), headerTitle: listShownType.getTitle(), menuType: $listShownType) {
+            List {
+                Section {
+                    // Carousel Group
+                    CarouselHeader(buttonType: .image("filterIcon"), headerTitle: listShownType.getTitle(), menuType: $listShownType) {
+                    }
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        LazyHStack(alignment: .center) {
+                            ForEach($viewModel.groups) { item in
+                                CategoryButton(item: item)
+                            }
+                        }
+                    }
+                    .padding(.all, 10)
+                    .listRowInsets(EdgeInsets())
+                }
+                Section {
+                    ForEach(viewModel.list, id: \.self) { item in
+                        MetadataView(vm: LinkViewModel(link: item))
                             
-                        }
-                        .padding(.horizontal, 20)
-                        
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            LazyHStack(alignment: .center) {
-                                ForEach($viewModel.groups) { item in
-                                    CategoryButton(item: item)
-                                }
-                            }
-                        }
-                        ForEach(viewModel.list, id: \.self) { item in
-                            Button {
-                                //                            cellClicked?(item)
-                            } label: {
-                                MetadataView(vm: LinkViewModel(link: item))
-                            }
-                        }
-                    }
-                    .padding(.top, 26)
+                    }.onDelete(perform: delete)
                 }
-                .background(Color(hex: "#EAEAEF"))
-                .foregroundColor(.black)
-                // Navigation Bar
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        HStack {
-                            Text("LinkMark")
-                                .font(.mulish(.bold, 32))
+            }
+            .frame(width: UIScreen.main.bounds.size.width,
+                         alignment: .center)
+                  .listRowInsets(.init())
+                  .listStyle(.grouped)
+            .background(Color(hex: "#EAEAEF"))
+            .foregroundColor(.black)
+            // Navigation Bar
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    HStack {
+                        Text("LinkMark")
+                            .font(.mulish(.bold, 32))
+                            .foregroundColor(.primary)
+                        Spacer()
+                        Button {
+                            showingAddItem.toggle()
+                        } label: {
+                            Image(systemName: "plus")
+                                .resizable()
                                 .foregroundColor(.primary)
-                            Spacer()
-                            Button {
-                                showingAddItem.toggle()
-                            } label: {
-                                Image(systemName: "plus")
-                                    .resizable()
-                                    .foregroundColor(.primary)
-                                    .frame(width: 20, height: 20)
-                            }
+                                .frame(width: 20, height: 20)
                         }
-                        .padding(.vertical, 20)
                     }
+                    .padding(.vertical, 20)
                 }
+            }
         }
         .sheet(isPresented: $showingAddItem) {
             AddItemView()
-                .presentationDetents([.large])
-                .presentationDragIndicator(.visible)
         }
     }
+    
+    func delete(at offsets: IndexSet) {
+        viewModel.list.remove(atOffsets: offsets)
+       }
 }
 
 struct HomeView_Previews: PreviewProvider {
