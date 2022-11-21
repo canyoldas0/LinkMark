@@ -74,7 +74,6 @@ struct MetadataView : View {
             Spacer()
            
         }
-//        .background(Color(hex: "#D9D9D9"))
         .cornerRadius(12)
     }
 }

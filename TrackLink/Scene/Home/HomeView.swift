@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GroupItem: Identifiable {
+struct GroupItem: Identifiable, Equatable {
     let id = UUID()
     var name: String
     var links: [String]
@@ -75,6 +75,9 @@ struct HomeView: View {
                 }
             }
         }
+        .onChange(of: viewModel.groups, perform: { newValue in
+            viewModel.filter()
+        })
         .sheet(isPresented: $showingAddItem) {
             AddItemView()
         }
