@@ -1,30 +1,45 @@
 //
-//  CustomTextField.swift
+//  CustomTextPicker.swift
 //  TrackLink
 //
-//  Created by Can Yoldaş on 18.11.2022.
+//  Created by Can Yoldaş on 21.11.2022.
 //
 
 import SwiftUI
 
-struct CustomTextField: View {
-    
-    @Binding var text: String
-    var placeholder: String
+protocol PickerSelectable: Hashable {
+    var name: String { get }
+}
+
+struct CustomTextPicker<T>: View where T: PickerSelectable {
     
     @State private var width = CGFloat.zero
     @State private var labelWidth = CGFloat.zero
+    let title: String
+    var items: [T]
+    @Binding var selectedItem: T
     
     var body: some View {
         HStack {
-            HStack {
-                TextField("...", text: $text)
-                Button {
-                    resetText()
-                } label: {
-                    Image(systemName: "xmark")
+        
+            Menu {
+                Picker(selection: $selectedItem, label: EmptyView()) {
+                    ForEach(items, id: \.self) {
+                        Text($0.name)
+                    }
                 }
-                .opacity(text.isEmpty ? 0:1)
+                .pickerStyle(.automatic)
+                .padding(.vertical, 5)
+            } label: {
+                HStack {
+                    Text(selectedItem.name)
+                        .padding(.leading, 10)
+                        .foregroundColor(.secondary)
+                        .font(.mulish(.light, 14))
+                    Spacer()
+                    Image(systemName: "chevron.down")
+                }
+            }
             }
                 .foregroundColor(.secondary)
                 .font(.system(size: 20))
@@ -37,7 +52,7 @@ struct CustomTextField: View {
                         RoundedRectangle(cornerRadius: 5)
                             .trim(from: 0.565 + (0.44 * (labelWidth / width)), to: 1)
                             .stroke(.gray, lineWidth: 1)
-                        Text(placeholder)
+                        Text(title)
                             .foregroundColor(.gray)
                             .overlay( GeometryReader { geo in Color.clear.onAppear { labelWidth = geo.size.width }})
                             .padding(2)
@@ -56,16 +71,11 @@ struct CustomTextField: View {
                     print("labelWidth: ", labelWidth)
                 }
         }
-        
     }
-    
-    private func resetText() {
-        text = ""
-    }
-}
 
-struct CustomTextField_Previews: PreviewProvider {
+struct CustomTextPicker_Previews: PreviewProvider {
     static var previews: some View {
-        CustomTextField(text: .constant("Name"), placeholder: "Enter")
+        CustomTextPicker(title: "Selection", items: ItemType.allCases, selectedItem: .constant(.item))
+            .previewLayout(.sizeThatFits)
     }
 }
