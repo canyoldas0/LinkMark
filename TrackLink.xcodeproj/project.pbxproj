@@ -19,6 +19,11 @@
 		1E720C0229184F7200170E30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E720C0129184F7200170E30 /* ContentView.swift */; };
 		1E720C0429184F7300170E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E720C0329184F7300170E30 /* Assets.xcassets */; };
 		1E720C0729184F7300170E30 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E720C0629184F7300170E30 /* Preview Assets.xcassets */; };
+		1E77BDED2930C693004D3F06 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0827A2292042A8006F915B /* AddItemView.swift */; };
+		1E77BDEE2930C6DB004D3F06 /* CustomTextPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DCCF9292BFD2000A09C3A /* CustomTextPicker.swift */; };
+		1E77BDEF2930C6E5004D3F06 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E413D742926E3DD00704DAF /* CustomTextField.swift */; };
+		1E77BDF02930C6FD004D3F06 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF934A8291F064500938831 /* Font+Extensions.swift */; };
+		1E77BDF12930C70E004D3F06 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF934A7291F064500938831 /* Color+Extensions.swift */; };
 		1EDAC64C2927ABC20024866B /* LinkItem.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAC64A2927ABC20024866B /* LinkItem.xcdatamodeld */; };
 		1EDAC64E2927AC850024866B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAC64D2927AC850024866B /* DataManager.swift */; };
 		1EDAC64F2927EED80024866B /* LinkItem.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAC64A2927ABC20024866B /* LinkItem.xcdatamodeld */; };
@@ -429,7 +434,12 @@
 			files = (
 				1EDAC64F2927EED80024866B /* LinkItem.xcdatamodeld in Sources */,
 				1EDAC6502927EEDB0024866B /* DataManager.swift in Sources */,
+				1E77BDEF2930C6E5004D3F06 /* CustomTextField.swift in Sources */,
+				1E77BDF12930C70E004D3F06 /* Color+Extensions.swift in Sources */,
+				1E77BDF02930C6FD004D3F06 /* Font+Extensions.swift in Sources */,
+				1E77BDEE2930C6DB004D3F06 /* CustomTextPicker.swift in Sources */,
 				1E6EF4D4291C2358009A6F57 /* ShareViewController.swift in Sources */,
+				1E77BDED2930C693004D3F06 /* AddItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

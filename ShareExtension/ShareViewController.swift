@@ -7,6 +7,7 @@
 
 import UIKit
 import Social
+import SwiftUI
 
 @objc(CustomShareNavigationController)
 class CustomShareNavigationController: UINavigationController {
@@ -33,8 +34,27 @@ final class CustomShareViewController: UIViewController {
         super.viewDidLoad()
 
         // 1: Set the background and call the function to create the navigation bar
-        self.view.backgroundColor = .systemGray6
+        self.view.backgroundColor = .systemGray
         setupNavBar()
+        
+        let hostingController = UIHostingController(rootView: AddItemView())
+        addChild(hostingController)
+        
+        view.addSubview(hostingController.view)
+        
+        /// Setup the contraints to update the SwiftUI view boundaries.
+        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+        let constraints = [
+            hostingController.view.topAnchor.constraint(equalTo: view.topAnchor),
+            hostingController.view.leftAnchor.constraint(equalTo: view.leftAnchor),
+            view.bottomAnchor.constraint(equalTo: hostingController.view.bottomAnchor),
+            view.rightAnchor.constraint(equalTo: hostingController.view.rightAnchor)
+        ]
+        
+        NSLayoutConstraint.activate(constraints)
+        
+        /// Notify the hosting controller that it has been moved to the current view controller.
+        hostingController.didMove(toParent: self)
     }
 
     // 2: Set the title and the navigation items
