@@ -27,15 +27,16 @@ class CustomShareNavigationController: UINavigationController {
 
 final class CustomShareViewController: UIViewController {
     
-//    private lazy var tex
-    
-    
+    var shareAddView: ShareAddView!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // 1: Set the background and call the function to create the navigation bar
         self.view.backgroundColor = .systemGray
         setupNavBar()
+        
+        shareAddView = ShareAddView()
         
         let hostingController = UIHostingController(rootView: AddItemView())
         addChild(hostingController)

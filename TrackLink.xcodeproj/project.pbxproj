@@ -28,6 +28,8 @@
 		1EDAC64E2927AC850024866B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAC64D2927AC850024866B /* DataManager.swift */; };
 		1EDAC64F2927EED80024866B /* LinkItem.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAC64A2927ABC20024866B /* LinkItem.xcdatamodeld */; };
 		1EDAC6502927EEDB0024866B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAC64D2927AC850024866B /* DataManager.swift */; };
+		1EDFB3882933800B00B0C5CB /* ShareAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDFB3872933800B00B0C5CB /* ShareAddView.swift */; };
+		1EDFB389293385D500B0C5CB /* ShareAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDFB3872933800B00B0C5CB /* ShareAddView.swift */; };
 		1EEB3A1229239D5500F6CFFB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEB3A1129239D5500F6CFFB /* HomeViewModel.swift */; };
 		1EF93472291F056E00938831 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF93471291F056E00938831 /* HomeView.swift */; };
 		1EF93486291F062400938831 /* Mulish-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF93476291F062400938831 /* Mulish-BlackItalic.ttf */; };
@@ -110,6 +112,7 @@
 		1E720C0629184F7300170E30 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1EDAC64B2927ABC20024866B /* LinkItem.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LinkItem.xcdatamodel; sourceTree = "<group>"; };
 		1EDAC64D2927AC850024866B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		1EDFB3872933800B00B0C5CB /* ShareAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareAddView.swift; sourceTree = "<group>"; };
 		1EEB3A1129239D5500F6CFFB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1EF9346E291EFCBB00938831 /* ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension.entitlements; sourceTree = "<group>"; };
 		1EF9346F291EFD1A00938831 /* TrackLink.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrackLink.entitlements; sourceTree = "<group>"; };
@@ -227,6 +230,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		1EDFB38629337E3C00B0C5CB /* ShareAdd */ = {
+			isa = PBXGroup;
+			children = (
+				1EDFB3872933800B00B0C5CB /* ShareAddView.swift */,
+			);
+			path = ShareAdd;
+			sourceTree = "<group>";
+		};
 		1EEB3A1029239D4B00F6CFFB /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +251,7 @@
 		1EF93470291F056300938831 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				1EDFB38629337E3C00B0C5CB /* ShareAdd */,
 				1EDAC6482927A94C0024866B /* Add */,
 				1EEB3A1029239D4B00F6CFFB /* Home */,
 			);
@@ -440,6 +452,7 @@
 				1E77BDEE2930C6DB004D3F06 /* CustomTextPicker.swift in Sources */,
 				1E6EF4D4291C2358009A6F57 /* ShareViewController.swift in Sources */,
 				1E77BDED2930C693004D3F06 /* AddItemView.swift in Sources */,
+				1EDFB389293385D500B0C5CB /* ShareAddView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +468,7 @@
 				1E4CFC8329242A1100E91FC4 /* MetadataView.swift in Sources */,
 				1EF934AD291F068900938831 /* SearchField.swift in Sources */,
 				1EF934AE291F068900938831 /* CarouselHeader.swift in Sources */,
+				1EDFB3882933800B00B0C5CB /* ShareAddView.swift in Sources */,
 				1EF93472291F056E00938831 /* HomeView.swift in Sources */,
 				1E720C0229184F7200170E30 /* ContentView.swift in Sources */,
 				1EF934AA291F064500938831 /* Font+Extensions.swift in Sources */,

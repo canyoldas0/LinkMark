@@ -25,7 +25,7 @@ struct AddItemView: View {
     
     @State private var urlText: String = ""
     @State private var nameText: String = ""
-    @State private var selectedItemType: ItemType = .item
+    @State private var selectedItemType: ItemType?
     private var showingURL: Bool {
         selectedItemType == .item
     }

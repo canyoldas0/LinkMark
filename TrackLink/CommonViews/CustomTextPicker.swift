@@ -17,7 +17,7 @@ struct CustomTextPicker<T>: View where T: PickerSelectable {
     @State private var labelWidth = CGFloat.zero
     let title: String
     var items: [T]
-    @Binding var selectedItem: T
+    @Binding var selectedItem: T?
     
     var body: some View {
         HStack {
@@ -32,7 +32,7 @@ struct CustomTextPicker<T>: View where T: PickerSelectable {
                 .padding(.vertical, 5)
             } label: {
                 HStack {
-                    Text(selectedItem.name)
+                    Text(selectedItem?.name ?? "")
                         .padding(.leading, 10)
                         .foregroundColor(.secondary)
                         .font(.mulish(.light, 14))
